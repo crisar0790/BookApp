@@ -8,9 +8,11 @@ export default function Home() {
     const [search, setSearch] = useState('');
     const [bookData, setData] = useState([]);
 
+    const API_KEY = process.env.API_KEY
+
     function searchBook(e) {
         if (e.key === "Enter") {
-            axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${process.env.APIKEY}&maxResults=40`)
+            axios.get(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=${API_KEY}&maxResults=40`)
                 .then(res => setData(res.data.items))
                 .catch(error => console.log(error))
         }
