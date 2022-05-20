@@ -29,7 +29,7 @@ export default function Home() {
                         <input type="text" placeholder="Enter your book name..."
                             value={search} onChange={e => setSearch(e.target.value)}
                             onKeyPress={searchBook} />
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button><i class="fa-solid fa-paper-plane-top"></i></button>
                     </div>
                     <img src={img} alt="children reading" />
                 </div>
